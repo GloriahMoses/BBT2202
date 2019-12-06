@@ -69,9 +69,6 @@ public class Main extends Application implements Interface{
         Text text2= new Text("You are in the system");
         gridpane1.add(text2, 0, 0);
 
-        Button buttonback = new Button("Go Back");
-        gridpane1.add(buttonback, 0, 4);
-
         DatePicker checkin = new DatePicker();
         checkin.setPromptText("Check In");
         gridpane1.add(checkin, 0, 6);
@@ -122,6 +119,12 @@ public class Main extends Application implements Interface{
                     stmt.setDate(2, Date.valueOf(checkout.getValue()));
                     stmt.setString(3, (String) room.getValue());
                     stmt.setString(4,emailField.getText());
+			
+			checkin.getEditor().clear();
+                    checkout.getEditor().clear();
+                    room.getSelectionModel().clearSelection();
+                    emailField.clear();
+			
                     stmt.executeUpdate();}catch(SQLException se){
                     se.printStackTrace();
                     
@@ -131,8 +134,6 @@ public class Main extends Application implements Interface{
 
         submit.addEventHandler(MouseEvent.MOUSE_CLICKED,eventHandler);
 
-
-        buttonback.setOnAction(e -> window.setScene(scene));
 
         //Setting title to the Stage
         stage.setTitle("Booking System");
