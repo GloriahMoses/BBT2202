@@ -61,6 +61,12 @@ public class Main extends Application implements Interface{
         gridpane.setAlignment(Pos.CENTER);
 
         //BackgroundImage
+        Image image = new Image ("https://images.wallpaperscraft.com/image/smoke_shroud_shape_dark_background_118972_1024x600.jpg");
+        gridpane.setBackground(new Background(new BackgroundImage(image,BackgroundRepeat.NO_REPEAT,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.DEFAULT,
+                BackgroundSize.DEFAULT)));
+
 
         //add gridpane to the scene
         scene = new Scene(gridpane, 1024, 600);
@@ -69,14 +75,17 @@ public class Main extends Application implements Interface{
         //Creating a Text object
         Text text = new Text("Welcome Our Booking System");
         gridpane.add(text, 0, 0);
+        text.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 45));
 
         //Setting font to the text
         text.setFont(new Font(45));
+        text.setFill(Color.WHITE);
 
         //Add Click to Book Link
         Button clickbook = new Button("Click Here to Book!!!");
         gridpane.add(clickbook, 0, 4);
         clickbook.setOnAction(e -> window.setScene(scene1));
+        clickbook.setAlignment(Pos.CENTER);
 
 
         //Scene2, Screen2
