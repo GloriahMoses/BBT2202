@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"connectivity","c":"ConnectionClass","l":"connection"},{"p":"connectivity","c":"ConnectionClass","l":"ConnectionClass()","url":"%3Cinit%3E()"},{"p":"connectivity","c":"ConnectionClass","l":"getConnection()"},{"p":"sample","c":"Main","l":"Main()","url":"%3Cinit%3E()"},{"p":"sample","c":"Main","l":"start(Stage)","url":"start(javafx.stage.Stage)"}]
